@@ -1,35 +1,32 @@
-import { profile } from "../data";
+import { Card, Section } from "../design-system";
+import { usePreferences } from "../preferences/PreferencesProvider";
 
 export function Contact() {
+  const { content } = usePreferences();
+  const { profile, ui } = content;
+
   return (
-    <section id="contact" className="section pb-28">
-      <h2 className="section-title">Contact</h2>
-      <div className="card">
-        <p className="max-w-xl text-slate-400">
-          Open to senior front-end roles and consulting. The fastest way to reach
-          me is email.
-        </p>
-        <div className="mt-6 grid gap-4 text-sm sm:grid-cols-3">
-          <a
-            href={`mailto:${profile.email}`}
-            className="text-accent transition hover:text-sky-300"
-          >
+    <Section id="contact" title={ui.sections.contact} className="pb-20">
+      <Card>
+        <p className="max-w-xl text-muted">{ui.contact.blurb}</p>
+        <div className="mt-5 grid gap-3 text-sm sm:grid-cols-3">
+          <a href={`mailto:${profile.email}`} className="ds-link">
             {profile.email}
           </a>
           <a
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="text-accent transition hover:text-sky-300"
+            className="ds-link"
           >
             github.com/sarinazeitooni
           </a>
-          <span className="text-slate-400">{profile.location}</span>
+          <span className="text-muted">{profile.location}</span>
         </div>
-      </div>
-      <p className="mt-10 text-center text-xs text-slate-600">
+      </Card>
+      <p className="mt-8 text-center text-xs text-subtle">
         © {new Date().getFullYear()} {profile.name}
       </p>
-    </section>
+    </Section>
   );
 }

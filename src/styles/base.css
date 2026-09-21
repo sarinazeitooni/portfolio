@@ -1,0 +1,33 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: rgb(var(--color-ink) / 1);
+    color: rgb(var(--color-foreground) / 1);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, var(--color-glow), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, var(--color-glow-secondary), transparent);
+    background-attachment: fixed;
+  }
+
+  html[lang="fa"] body {
+    font-family: var(--font-fa);
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+
+  ::selection {
+    background: rgb(var(--color-accent) / 0.28);
+    color: rgb(var(--color-heading) / 1);
+  }
+}

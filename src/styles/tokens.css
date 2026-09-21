@@ -1,0 +1,105 @@
+/* Design system tokens — single source of truth for theme values */
+
+@layer base {
+  :root {
+    /* Spacing scale (rem) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+
+    /* Radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.25rem;
+    --radius-full: 9999px;
+
+    /* Typography */
+    --font-sans: "Sora", system-ui, sans-serif;
+    --font-fa: "Vazirmatn", "Sora", system-ui, sans-serif;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --leading-tight: 1.2;
+    --leading-snug: 1.35;
+    --leading-normal: 1.6;
+    --tracking-tight: -0.02em;
+    --tracking-wide: 0.18em;
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration-fast: 150ms;
+    --duration-normal: 220ms;
+
+    /* Layout */
+    --content-max: 64rem;
+    --header-blur: 12px;
+  }
+
+  :root,
+  [data-theme="dark"] {
+    --color-ink: 11 15 25;
+    --color-panel: 18 24 38;
+    --color-elevated: 23 31 46;
+    --color-heading: 248 250 252;
+    --color-foreground: 203 213 225;
+    --color-muted: 148 163 184;
+    --color-subtle: 100 116 139;
+    --color-accent: 56 189 248;
+    --color-accent-hover: 125 211 252;
+    --color-on-accent: 11 15 25;
+    --color-line: 255 255 255;
+    --color-line-alpha: 0.1;
+    --color-line-strong-alpha: 0.35;
+    --color-tag-bg: 255 255 255;
+    --color-tag-alpha: 0.05;
+    --color-header: 11 15 25;
+    --color-header-alpha: 0.82;
+    --color-glow: rgb(56 189 248 / 0.12);
+    --color-glow-secondary: rgb(14 165 233 / 0.08);
+    --shadow-sm: 0 1px 0 rgb(255 255 255 / 0.04);
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.24);
+    --focus-ring: 0 0 0 2px rgb(var(--color-ink) / 1),
+      0 0 0 4px rgb(var(--color-accent) / 0.55);
+  }
+
+  [data-theme="light"] {
+    --color-ink: 241 245 249;
+    --color-panel: 255 255 255;
+    --color-elevated: 248 250 252;
+    --color-heading: 15 23 42;
+    --color-foreground: 51 65 85;
+    --color-muted: 100 116 139;
+    --color-subtle: 148 163 184;
+    --color-accent: 2 132 199;
+    --color-accent-hover: 3 105 161;
+    --color-on-accent: 255 255 255;
+    --color-line: 15 23 42;
+    --color-line-alpha: 0.1;
+    --color-line-strong-alpha: 0.35;
+    --color-tag-bg: 15 23 42;
+    --color-tag-alpha: 0.04;
+    --color-header: 241 245 249;
+    --color-header-alpha: 0.88;
+    --color-glow: rgb(2 132 199 / 0.1);
+    --color-glow-secondary: rgb(14 165 233 / 0.06);
+    --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.04);
+    --shadow-md: 0 10px 28px rgb(15 23 42 / 0.08);
+    --focus-ring: 0 0 0 2px rgb(var(--color-ink) / 1),
+      0 0 0 4px rgb(var(--color-accent) / 0.45);
+  }
+}
